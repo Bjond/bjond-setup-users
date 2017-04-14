@@ -1,0 +1,9 @@
+apply plugin: "war"
+
+defaultTasks "war"
+
+war {
+  webXml = file("src/web.xml")
+  archiveName = "bjond-setup-users.war"
+  outputs.files file("../../build/libs/bjond-setup-users.war")
+}
