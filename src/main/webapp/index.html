@@ -8,6 +8,23 @@
   <script type="text/javascript" src="bjond-users.js"></script>
 </head>
 <body>
-  <div class="main-div"></div>
+  <div class="main-div">
+    <form id="userform">
+      <input type="text" placeholder="Area" maxlength="3" name="user1area">
+      <input type="text" placeholder="Number" maxlength="7" name="user1number">
+      <input type="text" placeholder="E-mail" name="user1email">
+      <br/>
+      <input type="text" placeholder="Area" maxlength="3" name="user2area">
+      <input type="text" placeholder="Number" maxlength="7" name="user2number">
+      <input type="text" placeholder="E-mail" name="user2email">
+      <br/>
+      <input type="text" placeholder="Area" maxlength="3" name="user3area">
+      <input type="text" placeholder="Number" maxlength="7" name="user3number">
+      <input type="text" placeholder="E-mail" name="user3email">
+      <br/>
+      <button type="button" onclick="submitForm()">SUBMIT</button>
+    </form>
+	<div id="response"></div>
+  </div>
 </body>
 </html>
