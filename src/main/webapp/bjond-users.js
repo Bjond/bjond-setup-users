@@ -3,6 +3,7 @@
 function submitForm() {
 	var responseElement = document.getElementById('response');
 	responseElement.innerHTML = 'Submitting...';
+	responseElement.className = 'response-submit';
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '/server-core/services/tempuseredit/update');
@@ -11,8 +12,10 @@ function submitForm() {
 		console.log(xhr);
 		if (xhr.status === 200) {
 			responseElement.innerHTML = 'OK';
+			responseElement.className = 'response-success';
 		} else {
 			responseElement.innerHTML = 'Failed: ' + xhr.responseText;
+			responseElement.className = 'response-fail';
 		}
 	};
 	

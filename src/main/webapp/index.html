@@ -3,28 +3,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <html>
 <head>
-  <title>Bjond Health User Setup</title>
-  <link rel="stylesheet" type="text/css" href="styles.css"/>
-  <script type="text/javascript" src="bjond-users.js"></script>
+	<title>Bjond Health User Setup</title>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+	<script type="text/javascript" src="bjond-users.js"></script>
 </head>
 <body>
-  <div class="main-div">
-    <form id="userform">
-      <input type="text" placeholder="Area" maxlength="3" name="user1area">
-      <input type="text" placeholder="Number" maxlength="7" name="user1number">
-      <input type="text" placeholder="E-mail" name="user1email">
-      <br/>
-      <input type="text" placeholder="Area" maxlength="3" name="user2area">
-      <input type="text" placeholder="Number" maxlength="7" name="user2number">
-      <input type="text" placeholder="E-mail" name="user2email">
-      <br/>
-      <input type="text" placeholder="Area" maxlength="3" name="user3area">
-      <input type="text" placeholder="Number" maxlength="7" name="user3number">
-      <input type="text" placeholder="E-mail" name="user3email">
-      <br/>
-      <button type="button" onclick="submitForm()">SUBMIT</button>
-    </form>
-	<div id="response"></div>
-  </div>
+<div class="form-container">
+	<div class="inner-container">
+		<div class="bjond-logo"></div>
+		<form id="userform">
+			<label>Blixen</label>
+			<input type="text" class="area-code" placeholder="Area" maxlength="3" name="user1area">
+			<input type="text" class="phone-number" placeholder="Number" maxlength="7" name="user1number">
+			<input type="text" placeholder="E-mail" name="user1email">
+			<div class="spacer"></div>
+			<label>Dasher</label>
+			<input type="text" class="area-code" placeholder="Area" maxlength="3" name="user2area">
+			<input type="text" class="phone-number" placeholder="Number" maxlength="7" name="user2number">
+			<input type="text" placeholder="E-mail" name="user2email">
+			<div class="spacer"></div>
+			<label>Rudolph</label>
+			<input type="text" class="area-code" placeholder="Area" maxlength="3" name="user3area">
+			<input type="text" class="phone-number" placeholder="Number" maxlength="7" name="user3number">
+			<input type="text" placeholder="E-mail" name="user3email">
+			<br/>
+			<button type="button" onclick="submitForm()">Save</button>
+		</form>
+		<div id="response" class="empty-response"></div>
+	</div>
+</div>
 </body>
 </html>
