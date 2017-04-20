@@ -29,6 +29,26 @@ body {
 	background: url(Bjond-LogoWhite_TM_128px.png) center no-repeat;
 }
 
+#userform.not-ready {
+	display: none;
+}
+
+#checking-session {
+	line-height: 30px;
+	border: 1px solid #5388bb;
+	border-radius: 4px;
+	padding: 12px;
+	margin-top: 12px;
+	background: #333333;
+	font-family: 'Arial';
+	font-size: 16px;
+	color: #ffffff;
+}
+
+#checking-session.hidden {
+	display: none;
+}
+
 label {
 	display: inline-block;
 	width: 75px;
@@ -90,6 +110,7 @@ button {
 	padding: 12px;
 	margin-top: 12px;
 	background: #333333;
+	font-family: 'Arial';
 	font-size: 16px;
 }
 

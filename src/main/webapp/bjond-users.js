@@ -1,5 +1,19 @@
 'use strict';
 
+var xhr2 = new XMLHttpRequest();
+xhr2.open('GET', '/server-core/services/authenticate/issessionactive');
+xhr2.onload = function() {
+	console.log(xhr2);
+	if (xhr2.responseText && JSON.parse(xhr2.responseText).active === true) {
+		document.getElementById('checking-session').className = 'hidden';
+		document.getElementById('userform').className = '';
+	} else {
+		document.getElementById('checking-session').innerHTML = 'Redirecting to login...';
+		window.location.href = window.location.origin + '/#/login?destination=' + btoa('/bjond-setup-users');
+	}
+}
+xhr2.send();
+
 function submitForm() {
 	var responseElement = document.getElementById('response');
 	responseElement.innerHTML = 'Submitting...';
