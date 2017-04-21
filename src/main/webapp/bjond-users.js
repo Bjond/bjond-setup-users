@@ -42,3 +42,23 @@ function submitForm() {
 	xhr.send(JSON.stringify(postData));
 }
 
+function sendReset() {
+	var responseElement = document.getElementById('response');
+	responseElement.innerHTML = 'Invoking...';
+	responseElement.className = 'response-submit';
+	
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', '/server-core/services/tempuseredit/reset');
+	xhr.onload = function() {
+		console.log(xhr);
+		if (xhr.status === 200) {
+			responseElement.innerHTML = 'OK';
+			responseElement.className = 'response-success';
+		} else {
+			responseElement.innerHTML = 'Failed: ' + xhr.responseText;
+			responseElement.className = 'response-fail';
+		}
+	};
+	xhr.send();
+}
+

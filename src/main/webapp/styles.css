@@ -103,6 +103,10 @@ button {
 	cursor: pointer;
 }
 
+button.reset-button {
+	background: #e03348;
+}
+
 #response {
 	line-height: 30px;
 	border: 1px solid #5388bb;
